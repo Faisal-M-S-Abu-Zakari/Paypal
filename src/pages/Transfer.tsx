@@ -19,7 +19,7 @@ const Transfer = () => {
     if (users.length > 0) {
       setRecipient(users[users.length - 1]);
     }
-  }, []);
+  }, [recipient]);
   const calculateCAD = (usdAmount: string): string => {
     const usd = parseFloat(usdAmount) || 0;
     return (usd * EXCHANGE_RATE).toFixed(2);

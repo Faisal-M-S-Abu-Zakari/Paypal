@@ -21,7 +21,7 @@ const Search = () => {
   useEffect(() => {
     const users = JSON.parse(localStorage.getItem("userNames") || "[]");
     setStoredUsers(users);
-  }, []);
+  }, [storedUsers]);
   const fetchSuggestions = async (searchTerm: string) => {
     if (!searchTerm.trim()) {
       setSuggestions([]);

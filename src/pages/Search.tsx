@@ -64,7 +64,7 @@ const Search = () => {
         // No user found, save the search term as a new user
         const newUser = {
           name: searchName,
-          email: `${searchName.toLowerCase().replace(/\s+/g, ".")}@example.com`,
+          email: `${searchName.toLowerCase().replace(/\s+/g, "")}@`,
         };
 
         const updatedUsers = [...storedUsers, newUser];
@@ -118,7 +118,9 @@ const Search = () => {
         <button className="text-xl font-semibold text-gray-700 border-b-2 border-blue-500">
           Send
         </button>
-        <button className="text-xl font-semibold text-gray-700 ">Demand</button>
+        <button className="text-xl font-semibold text-gray-700 ">
+          to request
+        </button>
         <button className="text-xl font-semibold text-gray-700 ">
           Contacts
         </button>

@@ -13,23 +13,31 @@ const Confirmation = () => {
 
   return (
     <div className=" bg-gray-50 p-6">
-      <div className="max-w-md mx-auto text-center space-y-8 page-transition">
-        <div className="bg-primary/10 w-20 h-20 rounded-full mx-auto flex items-center justify-center">
-          <Check className="w-10 h-10 text-primary" />
-        </div>
+      <div className="flex gap-10 shadow-md px-[300px] py-5 bg-white rounded-lg justify-end">
+        <button className="text-xl font-semibold text-gray-700 ">More</button>
+        <button className="text-xl font-semibold text-gray-700 ">
+          Contacts
+        </button>
 
-        <div className="space-y-4">
-          <h1 className="text-2xl font-semibold">تم التحويل بنجاح!</h1>
-          <p className="text-gray-600">
-            You are successfully transferred {amount} USD to {recipient}
-          </p>
+        <button className="text-xl font-semibold text-gray-700 ">
+          Request
+        </button>
+        <button className="text-xl font-semibold text-blue-600 border-2 rounded-full p-2 px-4 border-blue-500">
+          Send
+        </button>
+      </div>
+      <div className="max-w-md py-9 mx-auto text-center space-y-8 page-transition flex flex-col justify-center items-center">
+        <div className="space-y-4 border border-black rounded-lg p-10 text-center">
+          <h1 className="text-2xl font-semibold">
+            You've sent {amount} USD to @{recipient}
+          </h1>
         </div>
 
         <Link
-          to="/"
-          className="block w-full py-4 bg-primary text-white rounded-xl font-medium hover:bg-primary/90 transition-all duration-300"
+          to="/transfer"
+          className="block w-[200px] py-2 px-4 bg-blue-800  text-white rounded-full "
         >
-          العودة للرئيسية
+          Send more money
         </Link>
       </div>
     </div>

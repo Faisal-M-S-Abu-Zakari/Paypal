@@ -1,4 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import logo from "../../../public/pnaypal.png";
 import { Link } from "react-router-dom";
 const Navbar = () => {
